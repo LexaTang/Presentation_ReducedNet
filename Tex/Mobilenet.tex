@@ -26,9 +26,9 @@
 %}
 %% <==
 
-\title{Introduction of Reduced Convolutional Networks}
+\title{精简卷积神经网络简介}
 
-\subtitle{精简卷积神经网络简介}
+\subtitle{以MobileNets和SkipNet为例}
 
 \author[唐呈俊]{%
 	唐呈俊
@@ -60,7 +60,7 @@
 \end{frame}
 
 
-\begin{frame}[standout]{Outline}
+\begin{frame}[standout]{大纲}
 
 	\medskip
 	\tableofcontents
@@ -75,18 +75,7 @@
 %%%%%%%%%%%%%%%%%
 
 
-\section{Preliminaries}
-
-\begin{frame}{\titleprefix: 自学内容}
-	\alert{我们假设你在学习本课程前已经了解了如下概念的内容：}
-	
-	\begin{description}
-		\item[FC] Fully Connected Layer，全连接层
-		\item[Activations] Activation Functions 激活函数
-	\end{description}
-
-	当然，基本的\alert{高等数学、线性代数、概率论}知识也是必要的。\alert{信息论}也许也会有一定的帮助。
-\end{frame}
+\section{什么是卷积}
 
 \begin{frame}{\titleprefix: 卷积层的计算}
 	\begin{figure}

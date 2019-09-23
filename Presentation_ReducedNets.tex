@@ -1,0 +1,369 @@
+% !TeX document-id = {c2f20315-5529-42f2-bcf9-afcfdc5d6349}
+% !TeX spellcheck = zh_CN
+% !TeX encoding = UTF-8
+% !TeX TXS-program:compile = txs:///pdflatex/
+% !BIB program = biber
+
+
+
+\documentclass[UTF8, fontset=founder, aspectratio=43, 10pt, t]{ctexbeamer}
+
+\input{Tex/Preamble_Presentation}
+
+\begin{document}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  MISCELLANEOUS SETTINGS/COMMANDS  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\balA}[1][1]{BAL$^\mathup{I}_{#1:#1}$\xspace}
+\newcommand{\unbalA}[1][n]{UNBAL$^\mathup{I}_{1:#1}$\xspace}
+\newcommand{\balB}[1][1]{BAL$^\mathup{II}_{#1:#1}$\xspace}
+\newcommand{\unbalB}[1][n]{UNBAL$^\mathup{II}_{#1:1}$\xspace}
+
+%% Add separator slide to the beginning of each section ==>
+\AtBeginSection[]{
+	\begin{frame}[standout, c]{~}
+		%\vfill
+		\usebeamerfont{title}%
+		\textcolor{SpotColor}{\insertsectionhead}
+		%\vfill
+	\end{frame}%
+}
+
+%% Alternativelyy, add ``Outline'' slide to the beginning of each section ==>
+%\AtBeginSection[]{
+%	\begin{frame}[plain]{Outline}
+%		\tableofcontents[currentsection]
+%	\end{frame}
+%}
+%% <==
+
+\title{Introduction of Reduced Convolutional Networks}
+
+\subtitle{精简卷积神经网络简介}
+
+\author[唐呈俊]{%
+	唐呈俊
+} % Author(s)
+
+\institute{%
+	桂林电子科技大学
+} % Institution(s)
+
+\date{%
+	%\\
+	%Name of the Inviting %Institution/Seminar Series
+	\\[\medskipamount]
+	\textmd{\today}%
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%  TITLE SLIDE  %%
+%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[standout]{~}
+	
+	\titlepage%
+	
+\end{frame}
+
+
+\begin{frame}[standout]{大纲}
+	
+	\medskip
+	\tableofcontents
+	
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%
+%%  MAIN PART  %%
+%%%%%%%%%%%%%%%%%
+
+
+\section{卷积}
+
+\begin{frame}{\titleprefix: 卷积层的计算}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{Images/conv_1}
+		\caption{卷积计算过程}
+		\label{fig:conv1}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{\titleprefix: 卷积层的参数}
+	卷积计算的公式：
+	\[
+	\mathbf{G}_{k, l, n}=\sum_{i, j, m} \mathbf{K}_{i, j, m, n} \cdot \mathbf{F}_{k+i-1, l+j-1, m}
+	\]
+	卷积层的参数：
+	\begin{description}
+		\item[Filter] 滤波器数量
+		\item[Kernel Size] 卷积核大小
+		\item[Strides] 步长
+		\item[Padding] 填充
+	\end{description}
+	
+\end{frame}
+
+\section{MobileNets}
+
+\begin{frame}{\titleprefix: AlexNet}
+	虽然AlexNet并非轻量化神经网络，但其中的两个方法，却是如今轻量化网络的重要基石：
+	\begin{description}
+		\item[Group Conv] AlexNet中，为了在两个GPU上并行训练，其将卷积按照通道分解为两个Group，从而在两个GPU上完成。
+		\item[ReLU] AlexNet中，采用了ReLU激活函数，相比先前的tanh和sigmoid函数，ReLU函数的计算速度，和训练时的收敛速度都更快。
+	\end{description}
+	\[
+	\text{ReLU}(x)=\max (0, x)
+	\]
+	
+\end{frame}
+
+\begin{frame}{\titleprefix: Group Conv}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.9\linewidth]{Images/groupconv_1}
+		\caption{AlexNet的Group Conv结构}
+		\label{fig:groupconv1}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}{\titleprefix: Depthwise Conv}
+	虽然AlexNet的Group Conv的目的是将计算分配给两个GPU并行运行，但是这也同样减少了计算量。
+	
+	如果说将每个通道，都分到其对应的Group中，这种Group Conv的特殊情况，就将其运算量减少到了最少的情况。但这样做的代价是通道之间的互信息被忽略了。
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/depthwise_1}
+		\caption{Depthwise Conv，其中M是通道数，也是滤波器数}
+		\label{fig:depthwise1}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{\titleprefix: Depthwise Conv}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{Images/depthwise_2}
+		\caption{标准的Conv（相对于 Depthwise Conv）}
+		\label{fig:depthwise2}
+	\end{figure}
+	\[
+	\mathbf{G}_{k, l, n}=\sum_{i, j, m} \mathbf{K}_{i, j, m, n} \cdot \mathbf{F}_{k+i-1, l+j-1, m}
+	\text{普通卷积}
+	\]	
+	\[
+	\hat{\mathbf{G}}_{k, l, m}=\sum_{i, j} \hat{\mathbf{K}}_{i, j, m} \cdot \mathbf{F}_{k+i-1, l+j-1, m}
+	\text{Depthwise Conv}
+	\]
+
+\end{frame}
+
+\begin{frame}{\titleprefix: MobileNets}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{Images/pointwise_1}
+		\caption{Pointwise Conv，即$1\time 1$ 结构的普通卷积}
+		\label{fig:pointwise1}
+	\end{figure}
+	
+	计算复杂度：
+	\[
+	D_{K} \cdot D_{K} \cdot M \cdot N \cdot D_{F} \cdot D_{F} 
+	\text{ 普通卷积}
+	\]	
+	\[
+	D_{K} \cdot D_{K} \cdot M \cdot D_{F} \cdot D_{F}+M \cdot N \cdot D_{F} \cdot D_{F} 
+	\text{ Depthwise + Pointwise Conv}
+	\]
+	
+	\[
+	\frac{D_{K} \cdot D_{K} \cdot M \cdot D_{F} \cdot D_{F}+M \cdot N \cdot D_{F} \cdot D_{F}}{D_{K} \cdot D_{K} \cdot M \cdot N \cdot D_{F} \cdot D_{F}} = \frac{1}{N}+\frac{1}{D_{K}^{2}} 
+	\]
+\end{frame}
+
+\begin{frame}{\titleprefix: 模型设计}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/mobilenetblock}
+		\caption{MobileNets模块}
+		\label{fig:mobilenetblock}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}{\titleprefix: 模型设计}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{Images/mobilenet}
+		%\caption{MobileNets网络结构}
+		\label{fig:mobilenet}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{\titleprefix: 模型性能}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/mobilenetres}
+		%\caption{计算性能消耗}
+		\label{fig:mobilenetres}
+	\end{figure}
+
+	同时，为了进一步压缩模型大小，MobileNets设计了超参数\alert{宽度乘子}$\alpha$，使得MobileNets模块的输入通道数变为$\alpha M$，输出通道数变为$\alpha N$，此时计算复杂度变为：
+	$$
+	D_{K} \cdot D_{K} \cdot \alpha M \cdot D_{F} \cdot D_{F}+\alpha M \cdot \alpha N \cdot D_{F} \cdot D_{F}
+	$$
+	
+\end{frame}
+
+\section{SkipNet}
+
+\begin{frame}{Highway Networks}
+	\alert{Gating units} 在Highway Networks中，引入了这一概念。如果说原始的神经网络可以表示为：
+	\begin{equation}
+	\mathbf{y}=H\left(\mathbf{x}, \mathbf{W}_{\mathbf{H}}\right)
+	\end{equation}
+	引入$T\left(\mathbf{x}, \mathbf{W}_{\mathbf{T}}\right)$, $C\left(\mathbf{x}, \mathbf{W}_{\mathbf{C}}\right)$两个函数，作为变换gate和运载gate：
+	\begin{equation}
+	\label{tc}
+	\mathbf{y}=H\left(\mathbf{x}, \mathbf{W}_{\mathbf{H}}\right) \cdot T\left(\mathbf{x}, \mathbf{W}_{\mathbf{T}}\right)+\mathbf{x} \cdot C\left(\mathbf{x}, \mathbf{W}_{\mathbf{C}}\right)
+	\end{equation}
+	设$C=1-T$，公式\eqref{tc}变换为：
+	\begin{equation}
+	\mathbf{y}=H\left(\mathbf{x}, \mathbf{W}_{\mathbf{H}}\right) \cdot T\left(\mathbf{x}, \mathbf{W}_{\mathbf{T}}\right)+\mathbf{x} \cdot\left(1-T\left(\mathbf{x}, \mathbf{W}_{\mathbf{T}}\right)\right)
+	\end{equation}
+	又令$H'=H\cdot T$：
+	\begin{equation}
+	\mathbf{y}=H‘\left(\mathbf{x}, \mathbf{W}_{\mathbf{H}}\right)+\mathbf{x} \cdot\left(1-T\left(\mathbf{x}, \mathbf{W}_{\mathbf{T}}\right)\right)
+	\end{equation}
+	可以看到，加入一个与原网络模块并列的gating unit 即可起到“加速信息流通”的作用。
+	
+\end{frame}
+
+\begin{frame}{Gating策略}
+	实际上，ResNet的结构便符合这一标准：
+	\begin{equation}
+	\mathbf{x}_{\text {ResNet }}^{i+1}=F^{i}\left(\mathbf{x}_{\text {ResNet }}^{i}\right)+\mathbf{x}_{\text {ResNet }}^{i}
+	\end{equation}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/gatingdesign}
+		\caption{两种不同的gating策略设计}
+		\label{fig:gatingdesign}
+	\end{figure}
+	作者针对ResNet设计了两种gating策略，一种是所有模块共用一个gate unit，还有一种是对每一个模块施加一个gate unit。
+	
+\end{frame}
+
+\begin{frame}{Gating units设计}
+	针对不同的网络模块类型，作者设计了不同的Gating units：
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/gatingdesign1}
+		\caption{三种不同的gating units}
+		\label{fig:gatingdesign1}
+	\end{figure}
+	\begin{description}
+		\item[FFGate-I] 大约消耗残差模块的$19\%$的性能；
+		\item[FFGate-II] 大约消耗残差模块的$12.5\%$的性能；
+		\item[RNNGate] 包含了单个LSTM模块，仅消耗$0.04\%$的微不足道的性能。
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}{Hybrid RL}
+	对于模块的两个输出大小的估计，直接使用soft-max策略进行训练，随后在计算向后传播时恢复到硬判定使得模型的准确率非常的低，因此作者设计了混合强化学习策略，将跳过模块省略的计算作为“奖励”，因此得到的新的目标函数为：
+	\begin{equation}
+	\begin{aligned} \min \mathcal{J}(\theta) &=\min \mathbb{E}_{\mathbf{x}} \mathbb{E}_{\mathbf{g}} L_{\theta}(\mathbf{g}, \mathbf{x}) \\ &=\min \mathbb{E}_{\mathbf{x}} \mathbb{E}_{\mathbf{g}}\left[\mathcal{L}\left(\hat{y}\left(\mathbf{x}, F_{\theta}, \mathbf{g}\right), y\right)-\frac{\alpha}{N} \sum_{i=1}^{N} R_{i}\right] \end{aligned}
+	\end{equation}
+	其中$R_{i}=\left(1-g_{i}\right) C_{i}$作为跳过计算的奖励，常数$C_{i}$为计算消耗，而ResNet中，可以视为$C_{i}=1$。
+	
+\end{frame}
+
+\begin{frame}{最终的训练策略}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/hrl}
+		\caption{最终的训练策略}
+		\label{fig:hrl}
+	\end{figure}
+	$$
+	G_{\text {relax }}(\mathbf{x})=\left\{\begin{aligned} \mathbb{I}(S(\mathbf{x}) \geq 0.5), & \text { forward pass } \\ S(\mathbf{x}), & \text { backward pass } \end{aligned}\right.
+	$$
+\end{frame}
+
+\begin{frame}{模型性能}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/res}
+		\caption{模型性能对比}
+		\label{fig:res}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/difficult}
+		\caption{跳过的模块数量与输入的复杂度有关}
+		\label{fig:difficult}
+	\end{figure}
+	
+\end{frame}
+
+\section{更多工作}
+
+\begin{frame}{\titleprefix: 网络性能对比实验}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Images/mobilenetcomp}
+		\includegraphics[width=0.7\linewidth]{Images/mobilenetcompgpu}
+		\caption{各版本MobileNet在CPU和GPU上性能的表现}
+		\label{fig:mobilenetcomp}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{\titleprefix: 如何改进现有网络}
+	
+	根据今天讲到的网络特性，对于不同的实际使用环境，如何改进现有网络？
+	
+\end{frame}
+
+\begin{frame}{\titleprefix: MobileNet V2}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\linewidth]{Images/mobilenetv2}
+		\caption{MobileNet V2与其它网络的对比}
+		\label{fig:mobilenetv2}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{\titleprefix: MobileNet V3}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.9\linewidth]{Images/mobilenetv3}
+		\caption{Sigmoid 和 Swish 的非线性形式及其hard近似}
+		\label{fig:mobilenetv3}
+	\end{figure}
+	\[\text { swish } x=x \cdot \sigma(x)
+	\hspace{1in}
+	\mathrm{h}-\text { swish }[x]=x
+	\frac{\operatorname{Re} \mathrm{L} \mathrm{U} 6(x+3)}{6}\]
+\end{frame}
+
+\begin{frame}
+	今天的内容结束了，谢谢大家。
+\end{frame}
+
+\end{document}
