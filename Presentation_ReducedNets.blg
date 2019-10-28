@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'Presentation_ReducedNets.blg'
+[17] biber:317> INFO - === 二 9月 24, 2019, 16:15:32
+[34] Biber.pm:371> INFO - Reading 'Presentation_ReducedNets.bcf'
+[77] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
+[81] Utils.pm:193> WARN - The file 'Presentation_ReducedNets.bcf' does not contain any citations!
+[86] bbl.pm:637> INFO - Writing 'Presentation_ReducedNets.bbl' with encoding 'UTF-8'
+[86] bbl.pm:740> INFO - Output to Presentation_ReducedNets.bbl
+[86] Biber.pm:110> INFO - WARNINGS: 1

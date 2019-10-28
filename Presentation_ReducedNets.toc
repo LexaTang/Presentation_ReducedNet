@@ -1,0 +1,7 @@
+\babel@toc {USenglish}{}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {USenglish}{}
+\beamer@sectionintoc {1}{卷积}{3}{0}{1}
+\beamer@sectionintoc {2}{MobileNets}{6}{0}{2}
+\beamer@sectionintoc {3}{SkipNet}{16}{0}{3}
+\beamer@sectionintoc {4}{更多工作}{23}{0}{4}
