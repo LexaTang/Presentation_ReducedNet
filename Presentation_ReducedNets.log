@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/TeX Live for SUSE Linux) (preloaded format=pdflatex 2019.9.5)  24 SEP 2019 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/TeX Live for SUSE Linux) (preloaded format=pdflatex 2019.9.5)  28 OCT 2019 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3667,7 +3667,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [3
 
 ]
-<Images/conv_1.png, id=94, 821.5958pt x 468.21735pt>
+<Images/conv_1.png, id=98, 821.5958pt x 468.21735pt>
 File: Images/conv_1.png Graphic file (type png)
 <use Images/conv_1.png>
 Package pdftex.def Info: Images/conv_1.png  used on input line 102.
@@ -3716,11 +3716,24 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [5
 
 ]
+<Images/pool_1.png, id=158, 665.64473pt x 390.56554pt>
+File: Images/pool_1.png Graphic file (type png)
+<use Images/pool_1.png>
+Package pdftex.def Info: Images/pool_1.png  used on input line 127.
+(pdftex.def)             Requested size: 214.5022pt x 125.8536pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [6
+
+ <./Images/pool_1.png (PNG copy)>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[] [][][]
+ []
+
+[7
 
 ] (/usr/share/texmf/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -3730,27 +3743,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
-[7
-
-]
-<Images/groupconv_1.png, id=193, 749.32579pt x 357.50584pt>
-File: Images/groupconv_1.png Graphic file (type png)
-<use Images/groupconv_1.png>
-Package pdftex.def Info: Images/groupconv_1.png  used on input line 141.
-(pdftex.def)             Requested size: 275.78787pt x 131.57683pt.
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[] [][][]
- []
-
 [8
 
- <./Images/groupconv_1.png (PNG copy)>]
-<Images/depthwise_1.png, id=205, 382.65063pt x 111.48032pt>
-File: Images/depthwise_1.png Graphic file (type png)
-<use Images/depthwise_1.png>
-Package pdftex.def Info: Images/depthwise_1.png  used on input line 154.
-(pdftex.def)             Requested size: 214.5022pt x 62.49318pt.
+]
+<Images/groupconv_1.png, id=206, 749.32579pt x 357.50584pt>
+File: Images/groupconv_1.png Graphic file (type png)
+<use Images/groupconv_1.png>
+Package pdftex.def Info: Images/groupconv_1.png  used on input line 151.
+(pdftex.def)             Requested size: 275.78787pt x 131.57683pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3758,12 +3758,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [9
 
- <./Images/depthwise_1.png (PNG copy)>]
-<Images/depthwise_2.png, id=217, 367.4359pt x 152.99713pt>
-File: Images/depthwise_2.png Graphic file (type png)
-<use Images/depthwise_2.png>
-Package pdftex.def Info: Images/depthwise_2.png  used on input line 172.
-(pdftex.def)             Requested size: 153.21652pt x 63.79845pt.
+ <./Images/groupconv_1.png (PNG copy)>]
+<Images/depthwise_1.png, id=217, 382.65063pt x 111.48032pt>
+File: Images/depthwise_1.png Graphic file (type png)
+<use Images/depthwise_1.png>
+Package pdftex.def Info: Images/depthwise_1.png  used on input line 164.
+(pdftex.def)             Requested size: 214.5022pt x 62.49318pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3771,12 +3771,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [10
 
- <./Images/depthwise_2.png (PNG copy)>]
-<Images/pointwise_1.png, id=227, 353.74263pt x 131.4699pt>
-File: Images/pointwise_1.png Graphic file (type png)
-<use Images/pointwise_1.png>
-Package pdftex.def Info: Images/pointwise_1.png  used on input line 195.
-(pdftex.def)             Requested size: 153.21652pt x 56.94418pt.
+ <./Images/depthwise_1.png (PNG copy)>]
+<Images/depthwise_2.png, id=228, 367.4359pt x 152.99713pt>
+File: Images/depthwise_2.png Graphic file (type png)
+<use Images/depthwise_2.png>
+Package pdftex.def Info: Images/depthwise_2.png  used on input line 182.
+(pdftex.def)             Requested size: 153.21652pt x 63.79845pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3784,12 +3784,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [11
 
- <./Images/pointwise_1.png (PNG copy)>]
-<Images/mobilenetblock.png, id=236, 858.59901pt x 544.01044pt>
-File: Images/mobilenetblock.png Graphic file (type png)
-<use Images/mobilenetblock.png>
-Package pdftex.def Info: Images/mobilenetblock.png  used on input line 205.
-(pdftex.def)             Requested size: 214.5022pt x 135.90266pt.
+ <./Images/depthwise_2.png (PNG copy)>]
+<Images/pointwise_1.png, id=238, 353.74263pt x 131.4699pt>
+File: Images/pointwise_1.png Graphic file (type png)
+<use Images/pointwise_1.png>
+Package pdftex.def Info: Images/pointwise_1.png  used on input line 205.
+(pdftex.def)             Requested size: 153.21652pt x 56.94418pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3797,12 +3797,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [12
 
- <./Images/mobilenetblock.png (PNG copy)>]
-<Images/mobilenet.png, id=247, 542.025pt x 641.69406pt>
-File: Images/mobilenet.png Graphic file (type png)
-<use Images/mobilenet.png>
-Package pdftex.def Info: Images/mobilenet.png  used on input line 214.
-(pdftex.def)             Requested size: 153.21652pt x 181.38661pt.
+ <./Images/pointwise_1.png (PNG copy)>]
+<Images/mobilenetblock.png, id=247, 858.59901pt x 544.01044pt>
+File: Images/mobilenetblock.png Graphic file (type png)
+<use Images/mobilenetblock.png>
+Package pdftex.def Info: Images/mobilenetblock.png  used on input line 215.
+(pdftex.def)             Requested size: 214.5022pt x 135.90266pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3810,21 +3810,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [13
 
- <./Images/mobilenet.png (PNG copy)>]
-<Images/mobilenetres.png, id=257, 441.47543pt x 201.72066pt>
-File: Images/mobilenetres.png Graphic file (type png)
-<use Images/mobilenetres.png>
-Package pdftex.def Info: Images/mobilenetres.png  used on input line 229.
-(pdftex.def)             Requested size: 214.5022pt x 98.00984pt.
-LaTeX Font Info:    Try loading font information for LGR+FiraSans-TLF on input 
-line 229.
-
-(/usr/share/texmf/tex/latex/fira/LGRFiraSans-TLF.fd
-File: LGRFiraSans-TLF.fd 2019/04/04 (autoinst) Font definitions for LGR/FiraSan
-s-TLF.
-)
-LaTeX Font Info:    Font shape `LGR/FiraSans-TLF/book/it' will be
-(Font)              scaled to size 8.80005pt on input line 229.
+ <./Images/mobilenetblock.png (PNG copy)>]
+<Images/mobilenet.png, id=259, 542.025pt x 641.69406pt>
+File: Images/mobilenet.png Graphic file (type png)
+<use Images/mobilenet.png>
+Package pdftex.def Info: Images/mobilenet.png  used on input line 224.
+(pdftex.def)             Requested size: 153.21652pt x 181.38661pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3832,12 +3823,21 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [14
 
- <./Images/mobilenetres.png (PNG copy)>]
-<Images/mobilenetpf.png, id=270, 550.66599pt x 378.0277pt>
-File: Images/mobilenetpf.png Graphic file (type png)
-<use Images/mobilenetpf.png>
-Package pdftex.def Info: Images/mobilenetpf.png  used on input line 238.
-(pdftex.def)             Requested size: 245.14737pt x 168.29388pt.
+ <./Images/mobilenet.png (PNG copy)>]
+<Images/mobilenetres.png, id=269, 441.47543pt x 201.72066pt>
+File: Images/mobilenetres.png Graphic file (type png)
+<use Images/mobilenetres.png>
+Package pdftex.def Info: Images/mobilenetres.png  used on input line 239.
+(pdftex.def)             Requested size: 214.5022pt x 98.00984pt.
+LaTeX Font Info:    Try loading font information for LGR+FiraSans-TLF on input 
+line 239.
+
+(/usr/share/texmf/tex/latex/fira/LGRFiraSans-TLF.fd
+File: LGRFiraSans-TLF.fd 2019/04/04 (autoinst) Font definitions for LGR/FiraSan
+s-TLF.
+)
+LaTeX Font Info:    Font shape `LGR/FiraSans-TLF/book/it' will be
+(Font)              scaled to size 8.80005pt on input line 239.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3845,18 +3845,20 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [15
 
- <./Images/mobilenetpf.png (PNG copy)>]
+ <./Images/mobilenetres.png (PNG copy)>]
+<Images/mobilenetpf.png, id=281, 550.66599pt x 378.0277pt>
+File: Images/mobilenetpf.png Graphic file (type png)
+<use Images/mobilenetpf.png>
+Package pdftex.def Info: Images/mobilenetpf.png  used on input line 248.
+(pdftex.def)             Requested size: 245.14737pt x 168.29388pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [16
 
-]
-
-LaTeX Warning: Command \textquoteleft invalid in math mode on input line 262.
-
-
+ <./Images/mobilenetpf.png (PNG copy)>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
@@ -3864,11 +3866,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [17
 
 ]
-<Images/gatingdesign.png, id=297, 662.9987pt x 183.45462pt>
-File: Images/gatingdesign.png Graphic file (type png)
-<use Images/gatingdesign.png>
-Package pdftex.def Info: Images/gatingdesign.png  used on input line 277.
-(pdftex.def)             Requested size: 214.5022pt x 59.3533pt.
+
+LaTeX Warning: Command \textquoteleft invalid in math mode on input line 272.
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3876,12 +3876,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [18
 
- <./Images/gatingdesign.png (PNG copy)>]
-<Images/gatingdesign1.png, id=308, 619.00826pt x 135.00989pt>
-File: Images/gatingdesign1.png Graphic file (type png)
-<use Images/gatingdesign1.png>
-Package pdftex.def Info: Images/gatingdesign1.png  used on input line 293.
-(pdftex.def)             Requested size: 214.5022pt x 46.78445pt.
+]
+<Images/gatingdesign.png, id=308, 662.9987pt x 183.45462pt>
+File: Images/gatingdesign.png Graphic file (type png)
+<use Images/gatingdesign.png>
+Package pdftex.def Info: Images/gatingdesign.png  used on input line 287.
+(pdftex.def)             Requested size: 214.5022pt x 59.3533pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3889,37 +3889,32 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [19
 
- <./Images/gatingdesign1.png (PNG copy)>]
+ <./Images/gatingdesign.png (PNG copy)>]
+<Images/gatingdesign1.png, id=320, 619.00826pt x 135.00989pt>
+File: Images/gatingdesign1.png Graphic file (type png)
+<use Images/gatingdesign1.png>
+Package pdftex.def Info: Images/gatingdesign1.png  used on input line 303.
+(pdftex.def)             Requested size: 214.5022pt x 46.78445pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [20
 
-]
-<Images/hrl.png, id=331, 450.90196pt x 209.66241pt>
-File: Images/hrl.png Graphic file (type png)
-<use Images/hrl.png>
-Package pdftex.def Info: Images/hrl.png  used on input line 314.
-(pdftex.def)             Requested size: 214.5022pt x 99.74103pt.
-
+ <./Images/gatingdesign1.png (PNG copy)>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [21
 
- <./Images/hrl.png (PNG copy)>]
-<Images/res.png, id=339, 708.56021pt x 242.22363pt>
-File: Images/res.png Graphic file (type png)
-<use Images/res.png>
-Package pdftex.def Info: Images/res.png  used on input line 330.
-(pdftex.def)             Requested size: 214.5022pt x 73.32924pt.
-<Images/difficult.png, id=340, 754.90729pt x 251.75374pt>
-File: Images/difficult.png Graphic file (type png)
-<use Images/difficult.png>
-Package pdftex.def Info: Images/difficult.png  used on input line 330.
-(pdftex.def)             Requested size: 214.5022pt x 71.53543pt.
+]
+<Images/hrl.png, id=342, 450.90196pt x 209.66241pt>
+File: Images/hrl.png Graphic file (type png)
+<use Images/hrl.png>
+Package pdftex.def Info: Images/hrl.png  used on input line 324.
+(pdftex.def)             Requested size: 214.5022pt x 99.74103pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -3927,76 +3922,62 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [22
 
- <./Images/res.png (PNG copy)> <./Images/difficult.png (PNG copy)>]
+ <./Images/hrl.png (PNG copy)>]
+<Images/res.png, id=350, 708.56021pt x 242.22363pt>
+File: Images/res.png Graphic file (type png)
+<use Images/res.png>
+Package pdftex.def Info: Images/res.png  used on input line 340.
+(pdftex.def)             Requested size: 214.5022pt x 73.32924pt.
+<Images/difficult.png, id=351, 754.90729pt x 251.75374pt>
+File: Images/difficult.png Graphic file (type png)
+<use Images/difficult.png>
+Package pdftex.def Info: Images/difficult.png  used on input line 340.
+(pdftex.def)             Requested size: 214.5022pt x 71.53543pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [23
 
-]
-<Images/mobilenetcomp.png, id=355, 564.46674pt x 196.05159pt>
-File: Images/mobilenetcomp.png Graphic file (type png)
-<use Images/mobilenetcomp.png>
-Package pdftex.def Info: Images/mobilenetcomp.png  used on input line 343.
-(pdftex.def)             Requested size: 214.5022pt x 74.50037pt.
-<Images/mobilenetcompgpu.png, id=356, 564.46674pt x 196.05159pt>
-File: Images/mobilenetcompgpu.png Graphic file (type png)
-<use Images/mobilenetcompgpu.png>
-Package pdftex.def Info: Images/mobilenetcompgpu.png  used on input line 343.
-(pdftex.def)             Requested size: 214.5022pt x 74.50037pt.
-
+ <./Images/res.png (PNG copy)> <./Images/difficult.png (PNG copy)>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [24
 
- <./Images/mobilenetcomp.png> <./Images/mobilenetcompgpu.png>]
+]
+<Images/mobilenetcomp.png, id=366, 564.46674pt x 196.05159pt>
+File: Images/mobilenetcomp.png Graphic file (type png)
+<use Images/mobilenetcomp.png>
+Package pdftex.def Info: Images/mobilenetcomp.png  used on input line 353.
+(pdftex.def)             Requested size: 214.5022pt x 74.50037pt.
+<Images/mobilenetcompgpu.png, id=367, 564.46674pt x 196.05159pt>
+File: Images/mobilenetcompgpu.png Graphic file (type png)
+<use Images/mobilenetcompgpu.png>
+Package pdftex.def Info: Images/mobilenetcompgpu.png  used on input line 353.
+(pdftex.def)             Requested size: 214.5022pt x 74.50037pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [25
 
-]
-<Images/mobilenetv2.png, id=377, 714.3319pt x 704.2481pt>
-File: Images/mobilenetv2.png Graphic file (type png)
-<use Images/mobilenetv2.png>
-Package pdftex.def Info: Images/mobilenetv2.png  used on input line 359.
-(pdftex.def)             Requested size: 183.8617pt x 181.26262pt.
-
+ <./Images/mobilenetcomp.png> <./Images/mobilenetcompgpu.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [26
 
- <./Images/mobilenetv2.png (PNG copy)>]
-<Images/mobilenetv3.png, id=386, 917.44864pt x 368.26947pt>
-File: Images/mobilenetv3.png Graphic file (type png)
-<use Images/mobilenetv3.png>
-Package pdftex.def Info: Images/mobilenetv3.png  used on input line 372.
-(pdftex.def)             Requested size: 275.78787pt x 110.70084pt.
-LaTeX Font Info:    Try loading font information for T1+XCharter-TLF on input l
-ine 372.
-
-(/usr/share/texmf/tex/latex/xcharter/T1XCharter-TLF.fd
-File: T1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-
-TLF.
-)
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 372.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 372.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 372.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 372.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 372.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 372.
+]
+<Images/mobilenetv2.png, id=388, 714.3319pt x 704.2481pt>
+File: Images/mobilenetv2.png Graphic file (type png)
+<use Images/mobilenetv2.png>
+Package pdftex.def Info: Images/mobilenetv2.png  used on input line 369.
+(pdftex.def)             Requested size: 183.8617pt x 181.26262pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
@@ -4004,12 +3985,44 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [27
 
- <./Images/mobilenetv3.png (PNG copy)>]
+ <./Images/mobilenetv2.png (PNG copy)>]
+<Images/mobilenetv3.png, id=397, 917.44864pt x 368.26947pt>
+File: Images/mobilenetv3.png Graphic file (type png)
+<use Images/mobilenetv3.png>
+Package pdftex.def Info: Images/mobilenetv3.png  used on input line 382.
+(pdftex.def)             Requested size: 275.78787pt x 110.70084pt.
+LaTeX Font Info:    Try loading font information for T1+XCharter-TLF on input l
+ine 382.
+
+(/usr/share/texmf/tex/latex/xcharter/T1XCharter-TLF.fd
+File: T1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-
+TLF.
+)
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 382.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 9.60007pt on input line 382.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 6.72005pt on input line 382.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 382.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 9.60007pt on input line 382.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 6.72005pt on input line 382.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 [] [][][]
  []
 
 [28
+
+ <./Images/mobilenetv3.png (PNG copy)>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[] [][][]
+ []
+
+[29
 
 ]
 \tf@nav=\write7
@@ -4021,11 +4034,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `Presentation_ReducedNets.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 378.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 378.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 388.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 388.
  (./Presentation_ReducedNets.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 378.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 378.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 388.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 388.
 Package rerunfilecheck Info: File `Presentation_ReducedNets.out' has not change
 d.
 (rerunfilecheck)             Checksum: 75DA2FE78DD40EC0E3E1DE7E6345B636;305.
@@ -4033,16 +4046,19 @@ d.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Presentation_ReducedNets.run.xml'.
 \openout1 = `Presentation_ReducedNets.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 66034 strings out of 492623
- 1407302 string characters out of 6137992
+ 66100 strings out of 492623
+ 1408393 string characters out of 6137992
  1939995 words of memory out of 5000000
- 68393 multiletter control sequences out of 15000+600000
- 1078094 words of font info for 366 fonts, out of 8000000 for 9000
+ 68447 multiletter control sequences out of 15000+600000
+ 1079984 words of font info for 373 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,17n,101p,1952b,2334s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/tr
@@ -4067,18 +4083,18 @@ texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder
 /fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSS
 K.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/font
 s/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF
-></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/tru
-etype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF>{/us
-r/share/texmf/fonts/enc/dvips/fira/fir_xnxi6j.enc}</usr/share/texmf/fonts/truet
+></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF>{/usr/share/texmf/fonts/enc
+/dvips/fira/fir_xnxi6j.enc}</usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF><
+/usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truet
 ype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/
 share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/F
 ounder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share
 /texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founde
 r/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texm
 f/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZS
-SK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF>{/usr/share/texmf/fon
-ts/enc/dvips/fira/fir_54eqvx.enc}</usr/share/texmf/fonts/truetype/Founder/FZSSK
-.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts
+SK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fon
+ts/truetype/Founder/FZSSK.TTF>{/usr/share/texmf/fonts/enc/dvips/fira/fir_54eqvx
+.enc}</usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts
 /truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF>
 </usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/true
 type/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr
@@ -4088,19 +4104,20 @@ e/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Found
 er/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/tex
 mf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZ
 SSK.TTF></usr/share/texmf/fonts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fo
-nts/type1/public/fira/FiraSans-Book.pfb></usr/share/texmf/fonts/type1/public/fi
-ra/FiraSans-BookItalic.pfb></usr/share/texmf/fonts/type1/public/fira/FiraSans-S
-emiBold.pfb></usr/share/texmf/fonts/type1/public/fira/FiraSans-SemiBoldItalic.p
-fb></usr/share/texmf/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf/
-fonts/type1/public/hfbright/hfbrsy8.pfb></usr/share/texmf/fonts/type1/public/kp
-fonts/jkpsy.pfb></usr/share/texmf/fonts/type1/public/mathdesign/mdbch/md-chr7t.
-pfb></usr/share/texmf/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/sh
-are/texmf/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texmf/fo
-nts/type1/public/mathdesign/mdbch/md-chrma.pfb>
-Output written on Presentation_ReducedNets.pdf (28 pages, 2291861 bytes).
+nts/truetype/Founder/FZSSK.TTF></usr/share/texmf/fonts/type1/public/fira/FiraSa
+ns-Book.pfb></usr/share/texmf/fonts/type1/public/fira/FiraSans-BookItalic.pfb><
+/usr/share/texmf/fonts/type1/public/fira/FiraSans-SemiBold.pfb></usr/share/texm
+f/fonts/type1/public/fira/FiraSans-SemiBoldItalic.pfb></usr/share/texmf/fonts/t
+ype1/bitstrea/charter/bchr8a.pfb></usr/share/texmf/fonts/type1/public/hfbright/
+hfbrsy8.pfb></usr/share/texmf/fonts/type1/public/kpfonts/jkpsy.pfb></usr/share/
+texmf/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texmf/fonts/
+type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/share/texmf/fonts/type1/public
+/mathdesign/mdbch/md-chr7y.pfb></usr/share/texmf/fonts/type1/public/mathdesign/
+mdbch/md-chrma.pfb>
+Output written on Presentation_ReducedNets.pdf (29 pages, 2440312 bytes).
 PDF statistics:
- 653 PDF objects out of 1000 (max. 8388607)
- 450 compressed objects within 5 object streams
- 79 named destinations out of 1000 (max. 500000)
- 32669 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 667 PDF objects out of 1000 (max. 8388607)
+ 460 compressed objects within 5 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 32678 words of extra memory for PDF output out of 35830 (max. 10000000)
 
